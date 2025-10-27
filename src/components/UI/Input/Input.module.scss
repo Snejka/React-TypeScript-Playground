@@ -1,8 +1,7 @@
 .control {
-    margin-bottom: 1rem;
-  }
+  margin-bottom: 1rem;
   
-  .control label {
+  label {
     display: block;
     font-size: 0.85rem;
     font-weight: bold;
@@ -11,7 +10,7 @@
     text-transform: uppercase;
   }
   
-  .control input {
+  input {
     width: 100%;
     max-width: 35rem;
     font: inherit;
@@ -20,3 +19,4 @@
     border-radius: 4px;
     padding: 0.5rem;
   }
+}

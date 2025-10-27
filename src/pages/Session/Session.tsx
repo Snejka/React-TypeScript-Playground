@@ -1,8 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
-import { SESSIONS } from "../dummy-sessions";
-import Button from "../components/UI/Button/Button";
-import BookingSessionDialog from "../components/Sessions/BookSessionDialog";
+import { SESSIONS } from "../../dummy-sessions";
+import styles from './Session.module.scss';
+
+import Button from "../../components/UI/Button/Button";
+import BookingSessionDialog from "../../components/Sessions/BookSessionDialog";
 
 export default function SessionPage() {
   const params = useParams<{ id: string }>();
@@ -14,7 +16,7 @@ export default function SessionPage() {
 
   if (!loadedSession) {
     return (
-      <main id="session-page">
+      <main className={styles.sessionPage} id="session-page">
         <p>No session found!</p>
       </main>
     );
@@ -29,7 +31,7 @@ export default function SessionPage() {
   }
 
   return (
-    <main id="session-page">
+    <main className={styles.sessionPage} id="session-page">
       {isModalOpen && <BookingSessionDialog session={loadedSession} onClose={closeBookingModal}/>}
       <article>
         <header>
@@ -48,7 +50,7 @@ export default function SessionPage() {
             </p>
           </div>
         </header>
-        <p id="content">{loadedSession.description}</p>
+        <p className={styles.content}>{loadedSession.description}</p>
       </article>
     </main>
   );
