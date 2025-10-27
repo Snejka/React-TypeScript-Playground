@@ -1,8 +1,8 @@
 import { FormEvent, useEffect, useRef } from "react";
 
-import Modal , { ModalHandle } from "../UI/Modal"
-import Input from "../UI/Input";
-import Button from "../UI/Button";
+import Modal , { ModalHandle } from "../UI/Modal/Modal"
+import Input from "../UI/Input/Input";
+import Button from "../UI/Button/Button";
 import { useSessionsContext } from "../../context/SessionContext";
 import { Session } from "../../context/sessions/types/sessionTypes";
 

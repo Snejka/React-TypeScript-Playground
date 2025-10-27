@@ -1,9 +1,9 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import HomePage from "./pages/Home.tsx";
-import SessionsPage from "./pages/Sessions.tsx";
-import SessionPage from "./pages/Session.tsx";
-import Root from "./pages/Root.tsx";
+import HomePage from "./pages/Home";
+import SessionsPage from "./pages/Sessions";
+import SessionPage from "./pages/Session";
+import Root from "./pages/Root";
 
 const Router = createBrowserRouter([
   {

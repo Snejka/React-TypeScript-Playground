@@ -1,12 +1,14 @@
-import studentsImg from "../assets/students.jpg";
-import listImg from "../assets/list.jpg";
-import certificateImg from "../assets/certificate.jpg";
+import studentsImg from "../../assets/students.jpg";
+import listImg from "../../assets/list.jpg";
+import certificateImg from "../../assets/certificate.jpg";
+import styles from "./Home.module.scss";
 
 export default function HomePage() {
   return (
-    <main id="home-page">
+    <main className={styles.homePage}>
       <div id="modal-root"></div>
       <h2>Our Mission: Your Success</h2>
+      
       <section>
         <img src={studentsImg} alt="A group of students" />
         <div>
@@ -31,6 +33,7 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+
       <section>
         <img src={certificateImg} alt="A certificate" />
         <div>

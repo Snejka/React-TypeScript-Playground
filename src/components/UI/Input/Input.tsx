@@ -1,4 +1,5 @@
 import { type ComponentPropsWithoutRef, useRef } from "react";
+import styles from "./Input.module.scss";
 
 type InputProps = ComponentPropsWithoutRef<"input"> & {
   label: string;
@@ -7,7 +8,7 @@ type InputProps = ComponentPropsWithoutRef<"input"> & {
 
 export default function Input({ id, label, ...rest }: InputProps) {
   return (
-    <div className="control">
+    <div className={styles.control}>
       <label htmlFor={id}>{label}</label>
       <input id={id} {...rest} />
     </div>

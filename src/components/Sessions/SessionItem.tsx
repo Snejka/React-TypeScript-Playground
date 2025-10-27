@@ -1,5 +1,5 @@
 import { SessionType } from "./SessionsList";
-import Button from "../UI/Button";
+import Button from "../UI/Button/Button";
 
 export default function SessionItem({ title, summary, image, id }: SessionType) {
   return (

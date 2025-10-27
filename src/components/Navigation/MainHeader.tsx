@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import styles from './MainHeader.module.scss'
 
-import Button from "../UI/Button";
+import Button from "../UI/Button/Button";
 import UpcomingSessionDialog from "../Sessions/UpcomingSessionDialog";
 
 export default function MainHeader() {
@@ -18,14 +19,16 @@ export default function MainHeader() {
   return (
     <>
       {isModalOpen && <UpcomingSessionDialog onClose={handleUpcomingSessionsClose}/>}
-      <header id="main-header">
-        <h1>ReactMentoring</h1>
-        <nav>
+      <header className={styles.header}>
+        <h1 className={styles.title}>ReactMentoring</h1>
+        <nav className={styles.navigation}>
           <ul>
             <li>
               <NavLink
                 to="/"
-                className={({ isActive }) => (isActive ? "active" : "")}
+                className={({ isActive }) => 
+                  `${styles.navLink} ${isActive ? styles.active : ""}`
+                }
               >
                 Our Mission
               </NavLink>
@@ -33,7 +36,9 @@ export default function MainHeader() {
             <li>
               <NavLink
                 to="/sessions"
-                className={({ isActive }) => (isActive ? "active" : "")}
+                className={({ isActive }) => 
+                  `${styles.navLink} ${isActive ? styles.active : ""}`
+                }
                 end
               >
                 Browse Sessions
