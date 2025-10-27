@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-import Button from "../UI/Button";
+import Button from "../UI/Button/Button";
 import UpcomingSessionDialog from "../Sessions/UpcomingSessionDialog";
 
 export default function MainHeader() {

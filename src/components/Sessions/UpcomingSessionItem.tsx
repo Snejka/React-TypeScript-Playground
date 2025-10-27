@@ -1,5 +1,5 @@
 import type { Session } from '../../context/sessions/types/sessionTypes.tsx';
-import Button from '../UI/Button.tsx';
+import Button from '../UI/Button/Button.tsx';
 
 type UpcomingSessionProps = Session & {
     onCancel: () => void;

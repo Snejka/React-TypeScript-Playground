@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { SESSIONS } from "../dummy-sessions";
-import Button from "../components/UI/Button";
+import Button from "../components/UI/Button/Button";
 import BookingSessionDialog from "../components/Sessions/BookSessionDialog";
 
 export default function SessionPage() {

@@ -1,5 +1,6 @@
 import { type ReactNode, useRef, useImperativeHandle, forwardRef } from "react";
 import { createPortal } from "react-dom";
+import styles from './Modal.module.scss';
 
 export type ModalHandle = {
   open: () => void;
@@ -27,7 +28,7 @@ const Modal = forwardRef<ModalHandle, ModalProps>(
 
     // Expose the Component outside the React Tree and attaches it to an element
     return createPortal(
-      <dialog className="modal" onClose={onClose} ref={dialogRef}>
+      <dialog className={styles.modal} onClose={onClose} ref={dialogRef}>
         {children}
       </dialog>,
       document.getElementById("modal-root")!
